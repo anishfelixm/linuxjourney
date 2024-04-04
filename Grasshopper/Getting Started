@@ -2,3 +2,12 @@ Linux origins is inspired by the **UNIX operating system** developed in 1969 by 
 The Kernel is the most important part of the operating system. It allows the hardware to talk to the software and is the interface by which applications get access to use the computer processor. 
 
 In 1991, **Linus Torvalds** developed the Linux Kernel.
+
+A Linux System has 3 parts : 
+- Hardware
+- Linux kernel
+- User space
+Systems that use the Linux kernel are called Linux Operating Systems. Some popular distributions are : 
++ Debian 
+  Free and Open source OS in running for past 20 years. 3 versions : stable, testing and unstable. Best be working with stable version. Uses Debian packet management tools to manage linux distribution packages. It's a good "core" OS and can run on most platforms.
++ 
