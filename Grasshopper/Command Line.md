@@ -7,13 +7,14 @@ The "$" symbol points to normal user and varying on distribution and user access
 
 |**Commands**|**Application**                                |**Usage**         |**Result**                           |
 |------------|-----------------------------------------------|------------------|-------------------------------------|
-|echo        |Echoes back the messageto terminal             |$ echo Hello world|HelloWorld                           |
+|echo        |Echoes back the message to terminal             |$ echo Hello world|HelloWorld                           |
 |date        |Displays today's date, day and time on terminal|$date             |Tuesday 09 April 2024 07:18:31 AM IST|
 |whoami      |Displays the username on terminal              |$whoami           |anish                                |
 
 ---
 
 **pwd**
+  
   Everything in Linux is a file organized in a hierarchical order. The 1st or topmost directory is the root directory, represented by "/". The location to the files and folders is called path. It's useful to know the path so that you can navigate using terminal itself. To find path to current file, use the ***pwd*** command. pwd stands for "print working directory".
 Syntax:
 > $pwd
@@ -22,6 +23,7 @@ Syntax:
 ---
 
 **cd**
+
   To move around files in Linux, you'll need file path and the command "cd", which stands for change directory. There's 2 types of paths :
 + Absolute path : The path starts from root directory, represented using "/". eg - cd /home/anish/Desktop/
 + Relative path : The path is respect to current directory ie any movement will happen from current path. eg - cd ./Desktop/
@@ -42,6 +44,7 @@ Syntax :
 ---
 
 **ls**
+
   To see all files and folders inside a file path we use the ls command, which stands for list directories. 
 Syntax :
 > $ls -> shows files and folders in current path
@@ -60,6 +63,7 @@ Flags are options given to commands to extend their applications. THey can be co
 ---
 
 **touch**
+
   To make new files, a simple command is touch. It creates new empty files. It updates file timestamps as well.
 Syntax :
 > $touch newfile
@@ -67,6 +71,7 @@ Syntax :
 ---
 
 **file**
+
   Normally, like in Windows, files will have filenames such as .jpeg, .gif, etc. This isn't required in Linux, ie filenames are not required to represent the type of content in file. So we can have a .gif file without the filename being .gif. To get the type of file, use the "file" command.
 Syntax :
 > $file banana.jpg
@@ -74,6 +79,7 @@ Syntax :
 ---
 
 **cat**
+
   Command to only read a file. Stands for concatenate as one can view multiple files as well by concatenating them. Not the best tool to read large files, other tools exist.
 Syntax :
 > $cat dog.txt cat.txt
@@ -81,6 +87,7 @@ Syntax :
 ---
 
 **less**
+
   If the contents in a file is very large, then the "less" command can be used to view it in a paged manner. To navigate after using less command :
 + q - quit
 + PageDown, PageUp, Up and Down - navigate 
@@ -94,6 +101,7 @@ Syntax :
 ---
 
 **history**
+
   To look at the history of commands on shell, use the "history" command. Useful to search what command one had used. To move to a previous command, just use the *Up arrow key*.
 There's another way to search and use a previous used command on shell. Press *CTRL + R* and then start filling in parts of command to see previous commands. Then use *CTRL + R* to navigate till the command of choice and then press Enter to immediately execute it. Can use "!!" command to immediately execute the exact previous command.
 Syntax :
