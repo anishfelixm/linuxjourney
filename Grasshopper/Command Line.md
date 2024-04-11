@@ -175,6 +175,7 @@ Syntax :
 
 To delete folders, there's 2 ways :
 > $rm -r folder1   // recursively deletes everything inside folder1
+> 
 > $rmdir folder1
 
 ---
