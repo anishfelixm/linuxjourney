@@ -115,3 +115,67 @@ One more very useful feature is the use of __TAB__ key to autocomplete words. If
 
 ---
 
+**cp**
+
+  Copying files can be done in terminal itself by using "cp" command, which stands for copy.
+Syntax :
+> $cp myfile /home/anish/Desktop/  //copies file named myfile to location /home/anish/Desktop/
+
+  One can copy files, folders and also use wildcards. Wildcards are symbols that can be used in place of other charachters to make up a pattern. This helps in searching files. They can be used be any command.
+|----|-------------------------------------------|
+|*   |Represents any charachter/s of a string    |
+|?   |Represents a single charachter             |
+|[]  |Represents any charachters between brackets|
+
+> $cp *.jpg /home/anish/Pictures/
+
+This copies all jpg files in current directory to a new location
+To copy a folder holding many files, we cannot do a simple cp. A flag "-r" which stands for recursively must be used along with cp.
+> $cp -r myfolder /home/anish/Documents/
+
+By default, cp replaces file with same file name in new location. So to avoid being overwritten, use the "-i" flag ie interractive to prompt the user.
+
+---
+
+**mv**
+
+  Used to move files and folders to different locations and also maybe rename them. mv stands for move
+Syntax :
+> $mv file location
+
+Same flags used in cp command can be used here.
+|Syntax                                     |Action                                                                                               |
+|-------------------------------------------|-----------------------------------------------------------------------------------------------------|
+|$mv myfile /home/anish/Documents/          |Move myfile to new location ie /home/anish/Documents/                                                | 
+|$mv myfile1 myfile2 /home/anish/Documents/ |Moves myfile1, myfile2 to new location ie /home/anish/Documents/                                     |
+|$mv oldfile newfile                        |Renames oldfile to newfile                                                                           |
+|$mv dir1 dir2                              |Renames directory dir1 to directory dir2                                                             |
+|$mv -b dir1 dir2                           |Renames directory dir1 to directory dir2 and moves dir1 content to dir2 while keeping backup at ~dir2|
+
+---
+
+**mkdir**
+
+  To make new directories, use "mkdir" command which stands for make directory.
+Syntax : 
+> $mkdir folder1
+
+Multiple directories can be made too. Also subdirectories can be made at same time using the "-p" ie parent flag
+> $mkdir -p folder1/child1/child1_1
+
+---
+
+**rm**
+
+  To remove files in Linux, use the "rm" command. But once deleted there's no way of getting them back. One protection against accidently deleting important files is that if the files are write-protected then they won't be deleted by normal rm command. For that "-f" flag, which stands for force is to be used.
+Syntax :
+> $rm file1
+> $rm -f file1    // to remove any file, even if write protected, forcefully without any prompt
+> $rm -i file1    // will prompt the user to confirm delete before doing so
+
+To delete folders, there's 2 ways :
+> $rm -r folder1   // recursively deletes everything inside folder1
+> $rmdir folder1
+
+---
+
