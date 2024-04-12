@@ -180,3 +180,55 @@ To delete folders, there's 2 ways :
 
 ---
 
+**find**
+
+  To find a file or folder within a specified folder use the "find" command. The directory to be searched in must be specified as well as the name of file must be specified using the "-name" flag. The file type can also be specified using the "-type" flag. One cool thing to know is that, the system will not just search only that folder but all the subfolders as well.
+Syntax : 
+> $find /home -name cat.jpg
+> $find /home -type d -name myfolder     // d for directory
+
+---
+
+**help**
+
+  To find more details about some command, using "--help" option with the command or "help" command is the best shot to do so. 
+Syntax :
+> $help echo
+> $help find --help
+
+---
+
+**man**
+
+  "man" command is used to get documentation of commands ie "man" command gives the manual to use a command.
+Syntax : 
+> $man ls
+
+---
+
+**whatis**
+
+  Gives a brief description of the command. The content gets sourced from the man page and is like a quick description for any confusion on the command.
+Syntax :
+> $whatis cat
+
+---
+
+**alias**
+
+  To avoid repetitive use of some long commands or common commands, an alias name can be given to that command which can be done using the "alias" command. This alias is temporary however and is lost upon doing a logoff. To make a permanent change, the alias needs to be added to "~/.bashrc" file. The alias can be removed using the "unalias" command.
+Syntax : 
+> $alias foo="ls -la"
+> $unalias foo
+
+---
+
+**exit**
+
+  To exit from the shell use the "exit" or "logout" or close the terminal on GUI.
+Syntax :
+> $exit
+> $logout
+
+---
+---
