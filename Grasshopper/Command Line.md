@@ -29,6 +29,7 @@ Syntax:
 + Relative path : The path is respect to current directory ie any movement will happen from current path. eg - cd ./Desktop/
 Syntax :
 > $cd /home/anish/Desktop //absolute path
+> 
 > $cd ./Downloads/  //relative path
 
   There's some additional option symbols as well which shorten the commands to write.
@@ -48,6 +49,7 @@ Syntax :
   To see all files and folders inside a file path we use the ls command, which stands for list directories. 
 Syntax :
 > $ls -> shows files and folders in current path
+> 
 > $ls /home -> shows files and folders in /homes
 
   Not all files and folders will be visible. If filenames start with ".", then normal ls won't display the object as it treats it as hidden content. To view these contents can use "-a" flag, which shows all files in path. 
@@ -170,7 +172,9 @@ Multiple directories can be made too. Also subdirectories can be made at same ti
   To remove files in Linux, use the "rm" command. But once deleted there's no way of getting them back. One protection against accidently deleting important files is that if the files are write-protected then they won't be deleted by normal rm command. For that "-f" flag, which stands for force is to be used.
 Syntax :
 > $rm file1
+> 
 > $rm -f file1    // to remove any file, even if write protected, forcefully without any prompt
+> 
 > $rm -i file1    // will prompt the user to confirm delete before doing so
 
 To delete folders, there's 2 ways :
@@ -185,6 +189,7 @@ To delete folders, there's 2 ways :
   To find a file or folder within a specified folder use the "find" command. The directory to be searched in must be specified as well as the name of file must be specified using the "-name" flag. The file type can also be specified using the "-type" flag. One cool thing to know is that, the system will not just search only that folder but all the subfolders as well.
 Syntax : 
 > $find /home -name cat.jpg
+> 
 > $find /home -type d -name myfolder     // d for directory
 
 ---
@@ -194,6 +199,7 @@ Syntax :
   To find more details about some command, using "--help" option with the command or "help" command is the best shot to do so. 
 Syntax :
 > $help echo
+> 
 > $help find --help
 
 ---
@@ -219,6 +225,7 @@ Syntax :
   To avoid repetitive use of some long commands or common commands, an alias name can be given to that command which can be done using the "alias" command. This alias is temporary however and is lost upon doing a logoff. To make a permanent change, the alias needs to be added to "~/.bashrc" file. The alias can be removed using the "unalias" command.
 Syntax : 
 > $alias foo="ls -la"
+> 
 > $unalias foo
 
 ---
@@ -228,6 +235,7 @@ Syntax :
   To exit from the shell use the "exit" or "logout" or close the terminal on GUI.
 Syntax :
 > $exit
+> 
 > $logout
 
 ---
