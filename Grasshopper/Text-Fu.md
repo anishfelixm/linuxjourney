@@ -44,4 +44,45 @@ Here the myoutput data becomes the input stream which is redirected to newoutput
 
 **env**
 
-  
+  There's environment variables in an operating system, including Linux systems; which are used by processes and system to do operations. To see all the environment variables in a system, use the "env" command. 
+> $env
+
+  There are many environment variables and all of them have "$" as a prefix like $HOME, $PATH, etc. One very important variable is $PATH. For a command or package to work in linux, the kernel should be able to locate where the code of the command is located and for this it uses $PATH variable. When a command is typed, the kernel searches the binary file of the command in all locations mentioned in the $PATH. So upon adding new packages or commands and saving in different locations than usual, the path to that location must be added to $PATH in order to run that command. To just see values of some variables :
+> $echo $HOME
+> $echo $USER
+> $echo $PATH
+
+---
+> to add tab space while using terminal, do ctrl+v + tab
+
+---
+
+**cut**
+
+  To extract parts of text from a file, use the "cut" command. It has to be used along with flags like "-c", "-f", "-d". The -c flag tells to cut at the nth charachter ie :
+> $cut -c 5 sample.txt  // gives 5th charachter of every line in sample.txt
+
+  The -f flag tells to cut fields of text that is blocks of text separated by a special charachter. By default it is tab space, but can be changed using the -d flag.
+> $cut -f 2 sample.txt  // gives the second block of text in sample.txt which are separated by tab space from 1st block
+> 
+> $cut -f 1 -d ";" sample.txt  // gives the 1st block of text in sample.txt separated from 2nd block by ";" charachter
+>
+> $cut -c 4-11 sample.txt  // gives the 4th to 11th charachters of every line in sample.txt
+>
+> $cut -c -5 sample.txt  // gives 1st 5 charachters of every line in sample.txt
+>
+> $cut -c 6- sample.txt  // gives all charachters from 6th charachter to end of every line in sample.txt
+
+---
+
+**paste**
+
+  Similar to cat. Just attaches lines of text together. By default tab space is the delimiter, which can be changed using the -d flag.
+> $paste -s sample.txt
+>
+> $paste -d " " -s sample.txt
+>
+> $paste -d "\n" try.c try.cpp   // prints content in try.c and try.cpp together separating them using a line
+
+---
+
