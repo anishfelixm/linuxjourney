@@ -86,3 +86,45 @@ Here the myoutput data becomes the input stream which is redirected to newoutput
 
 ---
 
+**head**
+
+  Useful to see starting few lines of a long file. By default, it shows first 10 lines which can be changed using the "-n" flag. The "-c" flag shows number of charachters.
+> $head /var/log/syslog
+>
+> $head -n 15 /var/log/syslog
+>
+> $head -c 5 /var/log/syslog
+
+---
+
+**tail**
+
+  Similar to "head" command, but shows last few lines which can be adjusted using the "-n" flag. The "-f" flag stands for follow and basically keeps updating the output if the file grows ie new content is appended.
+> $tail -n 5 /var/log/syslog
+>
+> $tail -f -n 5 /var/log/syslog
+
+---
+
+**expand and unexpand**
+
+  These two commands will be used to interchange between spaces and Tab space.
+> $expand sample.txt
+>
+> $unexpand -a sample.txt
+
+---
+
+**join and split**
+
+  "join" command can be used to join to files by a common field. The data in this column must be common. If the common field has values that are not common, then those rows won't be in output.
+> $join file1.txt file2.txt
+
+  Let's say the 2nd column of file1 and 1st column of file2 is common field. Then we can use "-1" flag to set field of first file and "-2" flag to set field/column of second file, ie :
+> $join -1 2 -2 1 file1.txt file2.txt
+
+  Incase, field wasn't common it can be sorted. File can also be split into different files using "split" command. By default, it will split into files when each file reaches the 1000 line limit. The files will be named x** by default.
+> $split fileName
+
+---
+
