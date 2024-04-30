@@ -128,3 +128,41 @@ Here the myoutput data becomes the input stream which is redirected to newoutput
 
 ---
 
+**sort**
+
+  This command can be used to sort a file based on each line. It works the best when used in pair with other commands like "ls". "-r" flag is used to sort in reverse order and "-n" flag to sort numerically.
+> $sort file.txt
+>
+> $sort -r file.txt
+>
+> $sort -n file.txt
+
+---
+
+**tr \(translate\)**
+
+  "tr" command allows you to translate one set of charachters to another.
+> $tr a-z A-Z
+
+  This allows to translate whatever you type in terminal after the command from lowercase charachters to uppercase charachters. "-d" flag can also be used to delete a matching pattern from text typed further.
+> $tr -d ello
+
+  So if text entered thereafter is "hello", then the output is "h".
+
+---
+
+**uniq \(unique\)**
+
+  This is a tool for parsing text to show only unique lines of text given they are one after another ie, if there's some other line separating the two lines with same text / duplicates, then "uniq" won't be able to remove the duplicates. For such situation, sort and uniq can be used together. You can also count number of duplicates using the "-c" flag. If you want only unique lines with no duplicates using the "-u" flag and for displaying only duplicates use the "-d" flag.
+> $uniq file.txt
+>
+> $uniq -c file.txt
+>
+> $uniq -d file.txt
+>
+> $uniq -u file.txt
+>
+> $sort file.txt | uniq
+
+---
+
