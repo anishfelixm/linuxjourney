@@ -166,3 +166,26 @@ Here the myoutput data becomes the input stream which is redirected to newoutput
 
 ---
 
+**wc and nl**
+
+  "wc" stands for word count and it is used to do exactly that, count words in a file. The output displays 3 numbers : number of lines, number of words, and number of bytes. To display each individually, use the "-l", "-w", "-c" flag respectively.
+> $wc /etc/passwd
+>
+> $wc -l /etc/passwd
+
+  "nl" stands for number of lines and it's used to check the number of lines in a file.
+> $nl file.txt
+
+---
+
+**grep**
+
+  This is the most popular text processing command. It allows to search through the file for lines containing words having the charachters that match the pattern in command. For case insensitive search, use the "-i" flag. It's power is mainly seen by using regular expressions in patterns and by using it in pair with other commands.
+> $grep fox ./sample.txt
+> 
+> $ls ./ | grep ".txt"
+>
+> $grep -i "*llo" sample.txt
+
+---
+---
