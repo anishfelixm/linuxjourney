@@ -94,7 +94,21 @@ Two other useful command mode tools is :
 
 	There are lot more command options and tools in Vim but these are the essential basic ones.
 
-
 **Emacs**
 
-	
+Emacs is an extremely powerful text editor with which you can do file manipulation, code editing, etc. Has a harder learning curve than vim but is much more powerful and very extensible; ie one can write scripts in emacs to extend its functionality. To start emacs ie open welcome buffer :
+> $emacs
+
+Buffers in emacs is where the text resides in. So if a file is opened, a buffer is used to store file's content. Multiple buffers can be opened and one can switch between them.
+
+ To work with emacs, we will use combination of ctrl/alt + key. In emacs documentations, ctrl is shown as "C" and alt is shown as "M" ie meta key.
+- Ctrl+x Ctrl+s
+  	Save a file
+- Ctrl+x Ctrl+w
+  	Save a file as "name"
+- Ctrl+x s
+  	Save all
+- Ctrl+x Ctrl+f
+  	Open a file. Will prompt the fileName of file to open.
+
+The "save" file options will prompt if you want to save each file. Emacs will create a file if it doesn't exist while opening it. Emacs can also load up a directory.
