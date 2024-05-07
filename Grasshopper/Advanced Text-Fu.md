@@ -102,13 +102,44 @@ Emacs is an extremely powerful text editor with which you can do file manipulati
 Buffers in emacs is where the text resides in. So if a file is opened, a buffer is used to store file's content. Multiple buffers can be opened and one can switch between them.
 
  To work with emacs, we will use combination of ctrl/alt + key. In emacs documentations, ctrl is shown as "C" and alt is shown as "M" ie meta key.
-- Ctrl+x Ctrl+s
-  	Save a file
-- Ctrl+x Ctrl+w
-  	Save a file as "name"
-- Ctrl+x s
-  	Save all
-- Ctrl+x Ctrl+f
-  	Open a file. Will prompt the fileName of file to open.
+- Ctrl+x Ctrl+s : Save a file
+- Ctrl+x Ctrl+w : Save a file as "name"
+- Ctrl+x s : Save all
+- Ctrl+x Ctrl+f : Open a file. Will prompt the fileName of file to open.
 
 The "save" file options will prompt if you want to save each file. Emacs will create a file if it doesn't exist while opening it. Emacs can also load up a directory.
+
+To switch around buffers ie move to different files :
+- Ctrl+x b : Switch buffers
+- Ctrl+x right-arrow : switch to right buffer
+- Ctrl+x left-arrow : switch to left buffer
+- Ctrl+x k : close the buffer
+- Ctrl+x 2 : split current buffer into 2. To move between them, use Ctrl+x o
+- Ctrl+x 1 : set a single buffer as the current screen
+
+For Emacs Text manipulation, the arrows keys can be used as usual. Also :
+- Ctrl+up-arrow : Move up one paragraph
+- Ctrl+down-arrow : Move down one paragraph
+- Ctrl+left-arrow : Move left one word
+- Ctrl+right-arrow : Move right one word
+- Alt+> : Move end of buffer
+
+To cut \(kill\) and paste \(yank\) in Emacs, first move the cursor to the text you want to select to cut or paste. Then use "Ctrl+space" to start selecting text. Use normal arrow keys to do selection. Then do :
+- Ctrl+w : cut
+- Ctrl+y : yank or paste
+
+To close out of Emacs :
+- Ctrl+x Ctrl+c
+
+If you have any open unsaved buffers, it will ask to save the file.
+
+To find help :
+- Ctrl+h Ctrl+h
+
+To undo change :
+- Ctrl+x u
+
+Clearly there's more commands in Emacs. Shows how many features it is, indicating how powerful the text editor is.
+
+---
+---
