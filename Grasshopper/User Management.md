@@ -10,6 +10,6 @@
   One way to get superuser access is using "sudo". Another way is by using the "**su**" command which stands for "substitute users" and is used to substitute another user in place of current user as long as the password of the other user is known. The default is root ie if no user is specified the system substitutes user as root user as long as correct password is entered.
 > $su
 
-  But working as superuser all the time is dangerous and is better to stick to sudo for root access at times. The system doesn't let every random person run commands as superuser. The list of users with sudo access is listed in **/etc/sudoers** file. This file can be edited using the visudo command.
-
+  But working as superuser all the time is dangerous and is better to stick to sudo for root access at times. The system doesn't let every random person run commands as superuser. The list of users with sudo access is listed in **/etc/sudoers** file. This file can be edited using the "**visudo**" command.
+> $sudo visudo
   
