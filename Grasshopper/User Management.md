@@ -12,4 +12,23 @@
 
   But working as superuser all the time is dangerous and is better to stick to sudo for root access at times. The system doesn't let every random person run commands as superuser. The list of users with sudo access is listed in **/etc/sudoers** file. This file can be edited using the "**visudo**" command.
 > $sudo visudo
+
+
+  Usernames are not the identification of an user, UIDs are the identification of the user. UIDs are matched to users and this can be found in "**/etc/passwd/**" file.
+> $cat /etc/passwd/
+
+  This file contains detailed information about each user in each line. Each line output will look like:
+> root:x:0:0:root:/root:/bin/bash
+
+  The contents are separated by ":". The content in the file is :
++ Username
++ User's password - Password isn't saved in this file, rather in /etc/shadow. Here the content will be "x" when password is in /etc/shadow file. If content is "*", then it means user doesn't have login access and a blank block means the user doesn't have a password.
++ UserID - Root has UID 0
++ GroupID
++ GECOS field - Comment on User's real name, etc and content inside is separated by ","
++ User's home directory
++ User's shell - Most will have bash shell
+
+/etc/passwd will show users other than human users as users are just system processes running with different permissions. The contents of /etc/passwd can be edited by hand using the **vipw** tool to add or modify users, but it's better to do these tasks using other tools like useradd and userdel.
+
   
