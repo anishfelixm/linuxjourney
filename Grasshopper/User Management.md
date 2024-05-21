@@ -31,4 +31,36 @@
 
 /etc/passwd will show users other than human users as users are just system processes running with different permissions. The contents of /etc/passwd can be edited by hand using the **vipw** tool to add or modify users, but it's better to do these tasks using other tools like useradd and userdel.
 
-  
+  "**/etc/shadow**" is used to save data about user authentication. Needs superuser access to read data in /etc/shadow. 
+> $sudo cat /etc/shadow
+
+The file looks similar to /etc/passwd file and each line will look something like this :
+> root:MyEPTEa$6Nonsense:15000:0:99999:7:::
+
+The contents are separated by ":". The fields are :
++ Username
++ User's encrypted password
++ Date of last password changed - Value is number of days from Jan 1, 1970. If the value is 0, the user should change the password next time they log in.
++ Minimum password age - Minimum number of days user should wait before changing password
++ Maximum password age - Maximum number of days before user has to change the password.
++ Password warning period - Number of days before password expires.
++ Password Inactivity period - Number of days after a password has expired to log in with that password.
++ Account expiration date - Date from which user won't be able to log in.
++ Future use
+
+  Nowadays Linux uses other mechanisms such as **PAM** \(Pluggable Authentication Modules\) along with /etc/shadow to manage authentication.
+
+
+"**/etc/group**" is used in User management for managing different groups with different permissions.
+> $cat /etc/group
+
+This output will look similar to /etc/shadow , etc where fields are separated with ":". The fields are : 
++ Group name
++ Group Password - No neccesity to have group password. Default is "*".
++ Group ID \(GID\)
++ List of Users - Group of users in a specific group.
+
+Command "groups" can be used to see the groups that the current user belongs to.
+> $groups
+
+
