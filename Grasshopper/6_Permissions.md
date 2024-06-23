@@ -47,13 +47,16 @@ Be careful while giving permissions using chmod so that everyone isn't given per
 
 One can change user and group ownership of file.
 > $sudo chown Anish myfile
-> changes owner of myfile to user named "Anish"
-> 
+
+This changes owner of myfile to user named "Anish"
+
 > $sudo chgrp whales myfile
-> changes group of myfile to group named "whales"
-> 
+
+This changes group of myfile to group named "whales"
+
 > $sudo chown Anish:whales myfile
-> changes group and owner of myfile to "Anish" and "whales" at same time
+
+This changes group and owner of myfile to "Anish" and "whales" at same time
 
 There's a default list of permissions that's given to every file that's created. But in situation when you want to change this default permission use the "**umask**" command. "umask" doesn't add permissions but removes them away. It takes a 3 number parameter as permission bits. The 3 numbers are user, group and other permissions. Also the numerical values of permissions are used in parameters.
 > $umask 021
