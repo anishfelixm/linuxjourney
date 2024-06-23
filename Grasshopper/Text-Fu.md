@@ -49,7 +49,9 @@ Here the myoutput data becomes the input stream which is redirected to newoutput
 
   There are many environment variables and all of them have "$" as a prefix like $HOME, $PATH, etc. One very important variable is $PATH. For a command or package to work in linux, the kernel should be able to locate where the code of the command is located and for this it uses $PATH variable. When a command is typed, the kernel searches the binary file of the command in all locations mentioned in the $PATH. So upon adding new packages or commands and saving in different locations than usual, the path to that location must be added to $PATH in order to run that command. To just see values of some variables :
 > $echo $HOME
+> 
 > $echo $USER
+>
 > $echo $PATH
 
 ---
