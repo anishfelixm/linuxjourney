@@ -20,7 +20,7 @@ So in above example we can say user pete has :
 + read, execute as group permissions
 + read, execute as other permissions
 
-TO change or modify permissions, use the "**chmod**" command. We need to pick whether permission is for user, group or other and then use "+" to add permission and "-" to remove permission.
+To change or modify permissions, use the "**chmod**" command. We need to pick whether permission is for user, group or other and then use "+" to add permission and "-" to remove permission.
 
 > $chmod u+w myfile
 
