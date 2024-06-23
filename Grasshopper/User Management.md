@@ -64,3 +64,18 @@ Command "groups" can be used to see the groups that the current user belongs to.
 > $groups
 
 
+There are several commands to manage users. To add a new user to system, use the "**adduser**" or "**useradd**" command. There are configuration files for adding new users where one can manipulate what the user can access.
+
+> $sudo useradd Anish
+
+This creates an entry in /etc/passwd for Anish, sets up default groups and adds an entry to /etc/shadow file.
+To remove a user, use the "**userdel**" command. It also tries to undo the file changes made by the user.
+
+> $sudo userdel Anish
+
+The command "**passwd**" allows you to change your password. If you're the root user then it allows you to change passwords of other user as well.
+
+> $passwd Anish
+
+---
+---
