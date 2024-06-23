@@ -124,6 +124,7 @@ Syntax :
 > $cp myfile /home/anish/Desktop/  //copies file named myfile to location /home/anish/Desktop/
 
   One can copy files, folders and also use wildcards. Wildcards are symbols that can be used in place of other charachters to make up a pattern. This helps in searching files. They can be used be any command.
+|wildcard|Value|
 |----|-------------------------------------------|
 |*   |Represents any charachter/s of a string    |
 |?   |Represents a single charachter             |
