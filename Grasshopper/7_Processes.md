@@ -56,3 +56,18 @@ When the parent process dies before the child process, there won't be a "wait" s
 - **Zombie process** :
 When the child process terminates, there's time till parent process calls "wait" system call.  The kernel makes these processes as "Zombie proceess". The resources of the child process would have been freed up but there's still an entry of child process in the process table. So zombie processes can't be killed since it's technically a "dead" process. When the parent calls "wait" system call, the zombie will disappear and this is called "reaping". If parent doesn't call "wait" then "init" will adopt them and do the "wait" call to remove the zombie. Too many zombie processes is bad, as they fill up process table and then prevent other processes from running.
 
+A signal is a notification to a process that something has happened. Signals are way that processes use to communicate. They are helpful in interrupt cases like:
+- An user can use special termination charachters like Ctrl+C and Ctrl+Z to kill, interrupt or suspend process
+- Kernel wants to notify processes that some hardware issue has occured
+- Kernel wants to notify processes that some software issue has occured
+
+When a signal is generated, it has to be delivered to the processes. Until it is delivered it's in pending state. When process is run on system, it's considered delivered. However, processes have signal masks and so they can set signal delivery to be blocked if specified. When a signal is delivered, a process can ignore the signal, or "catch" the signal and perform signal handling routine, or terminate the process, or block the signal \(depending on signal mask\). Each signal is defined by integers and named in the format "SIGxxx". Common signals are:
++ SIGHUP or HUP or 1: Hangup
++ SIGINT or INT or 2: Interrupt
++ SIGKILL or KILL or 9: Kill
++ SIGSEGV or SEGV or 11: Segmentation fault
++ SIGTERM or TERM or 15: Software termination
++ SIGSTOP or STOP: Stop
+
+Some signals are unblockable like SIGKILL \(which destroys the process\).
+
