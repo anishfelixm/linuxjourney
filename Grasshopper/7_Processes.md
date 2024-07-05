@@ -71,3 +71,22 @@ When a signal is generated, it has to be delivered to the processes. Until it is
 
 Some signals are unblockable like SIGKILL \(which destroys the process\).
 
+There's a command to send a signal to kill/terminate the process. It's "**kill**". 
+> $kill PID
+
+PID is the Process ID of the process. By default "kill" sends a TERM or SIGTERM signal to request a process to terminate cleanly by releasing its resources and saving its state. But using flag "9" allows to run the SIGKILL signal and kill the process.
+> $kill -9 PID
+
+Difference between SIGHUP, SIGINT, SIGTERM, SIGKILL, SIGSTOP:
++ SIGHUP - Hangup, sent to a process when the controlling terminal is closed.
++ SIGINT - Is an interrupt signal, so you can use Ctrl-C and the system will try to gracefully kill the process
++ SIGTERM - Kill the process, but allow it to do some cleanup first
++ SIGKILL - Kill the process, doesn't do any cleanup
++ SIGSTOP - Stop/suspend a process
+
+When there are multiple processes running on a system, they don't all run together at same time. Instead each process is given a "**time slice**" ie a small amount of time the process is given the CPU processing access. Then they pause for few milliseconds and another process gets the time slice. By default, this scheduling happens in "Round Robin" fashion. Each process keeps getting a time slice until processing is finished. The kernel handles the switching of processes. 
+If all processes were equal, each would get the same time slice. But they aren't, so we use "**nice**" value to basically assign priority to processes so that processes are able to decide who gets the CPU. A higher nice value means less priority while lower nice value means higher priority \(think that process isn't nice to CPU and it wants to get rid of it\). The "NI" column when we use "top" command stands for "Nice" value. To change the "Nice" value, use the "**nice**" and "**renice**" command. "nice" command is to set nice value for a new process and "renice" is to update "Nice" value for existing process.
+> $nice -n 5 apt upgrade
+>
+> $renice 10 -p PID
+
