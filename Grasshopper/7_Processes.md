@@ -90,3 +90,36 @@ If all processes were equal, each would get the same time slice. But they aren't
 >
 > $renice 10 -p PID
 
+The "**STAT**" column when we do "ps aux" shows the states the processes are in. The following are the states a process can be in :
++ R: running or runnable, it is just waiting for the CPU to process it
++ S: Interruptible sleep, waiting for an event to complete
++ D: Uninterruptible sleep, processes that cannot be killed or interrupted with a signal
++ Z: Zombie, zombies are terminated processes that are waiting to have their statuses collected
++ T: Stopped, a process that has been suspended/stopped
+
+Everything is a file in Linux, including processes. Process information is stored in file-system known as "**/proc**". "ls /proc" will display multiple sub directories, one for each PID. 
+> $cat /proc/PID/status
+
+This gives detailed information \(state information, etc\) about the process with that PID. The "/proc" directory is how the kernel views the system.
+
+We can control how processes run with "**jobs**". To send a process to run in background, we append the "**ampersand \(&\)**" at the end of the command. This will tell the kernel to run the process in background, allowing us to use the shell for other work.
+> $sleep 1001 &
+
+To view process sent to background, use the "jobs" command. The first column shows the Job ID, then the status and then the command. The "+" next to Job ID means it was most recent job started and "-" next to Job ID means it was the 2nd last job started.
+> $jobs
+
+To send an already running process to background, there's no need to terminate the process and start it again in background. Instead, suspend the process using Ctrl+Z and then run "**bg**" command to send to background.
+> $sleep 1001
+> 
+> ^Z
+> 
+> $bg
+
+To move a job from background to foreground we use the "**fg**" command along with the Job ID. If fg is run without any parameter, it will bring the most recent background job to foreground.
+> $fg %1
+
+To kill background process use the "kill" command with syntax similar to "fg" along with their Job Id.
+> $kill %1
+
+---
+---
