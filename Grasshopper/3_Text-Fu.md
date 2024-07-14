@@ -119,7 +119,7 @@ Here the myoutput data becomes the input stream which is redirected to newoutput
 
 **join and split**
 
-  "join" command can be used to join to files by a common field. The data in this column must be common. If the common field has values that are not common, then those rows won't be in output.
+  "join" command can be used to join two files by a common field. The data in this column must be common. If the common field has values that are not common, then those rows won't be in output.
 > $join file1.txt file2.txt
 
   Let's say the 2nd column of file1 and 1st column of file2 is common field. Then we can use "-1" flag to set field of first file and "-2" flag to set field/column of second file, ie :
