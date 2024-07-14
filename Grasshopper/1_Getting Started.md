@@ -1,4 +1,4 @@
-<p align text = "">Linux origins is inspired by the **UNIX operating system** developed in 1969 by Ken Thompson and Dennis Ritchie of Bell Laboratories. The GNU project, which stands for *GNU is Not Unix*; lead to the creation of the __GNU General Public License__ (GPL), a free software license which made a path for linux development.
+<p style="text-align: center;">Linux origins is inspired by the **UNIX operating system** developed in 1969 by Ken Thompson and Dennis Ritchie of Bell Laboratories. The GNU project, which stands for *GNU is Not Unix*; lead to the creation of the __GNU General Public License__ (GPL), a free software license which made a path for linux development.
 The Kernel is the most important part of the operating system. It allows the hardware to talk to the software and is the interface by which applications get access to use the computer processor. 
 
 In 1991, **Linus Torvalds** developed the Linux Kernel.
