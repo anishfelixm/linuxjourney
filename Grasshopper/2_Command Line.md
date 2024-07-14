@@ -1,4 +1,4 @@
-  The **Shell** is a computer program which takes commands from the keyboard and sends to the Operating system to execute. System programs such as "_terminal_" or "_console_" launch a shell for you. Most Linux distributions have a shell called ***bash***, which stands for **B**ourne **A**gain **Sh**ell. There are other shell programs as well like zsh, tsh, etc.
+<p style="text-align: center;">The **Shell** is a computer program which takes commands from the keyboard and sends to the Operating system to execute. System programs such as "_terminal_" or "_console_" launch a shell for you. Most Linux distributions have a shell called ***bash***, which stands for **B**ourne **A**gain **Sh**ell. There are other shell programs as well like zsh, tsh, etc.
 
   When a shell is opened the prompt may look like :
 >pete@icebox:/home/pete $
@@ -241,3 +241,4 @@ Syntax :
 
 ---
 ---
+</p>
