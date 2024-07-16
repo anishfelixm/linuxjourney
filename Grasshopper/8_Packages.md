@@ -1,4 +1,4 @@
-<p style="text-align: center;">Our system is comprised of many packages like internet browsers, text editors, etc. These packages are managed by "**package managers**", which install and maintain the software on the system.
+Our system is comprised of many packages like internet browsers, text editors, etc. These packages are managed by "**package managers**", which install and maintain the software on the system.
 > Don't always need package managers to install all packages. Some can be directly installed using the source code.
 
 The most common variety of packages are Debian \(.deb\) and Red Hat \(.rbm\). Debian style packages are for distributions like Debian, LinuxMint, Ubuntu, etc while Red Hat style packages are seen in Linux, CentOS, Fedora, etc.
@@ -90,4 +90,3 @@ It's necessary to be careful while using "make install". There are a lot of proc
 
 ---
 ---
-</p>
