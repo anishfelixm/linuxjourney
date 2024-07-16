@@ -1,3 +1,5 @@
+<p style="text-align: center;">
+  
 Our system is comprised of many packages like internet browsers, text editors, etc. These packages are managed by "**package managers**", which install and maintain the software on the system.
 > Don't always need package managers to install all packages. Some can be directly installed using the source code.
 
