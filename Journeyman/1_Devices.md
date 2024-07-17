@@ -34,4 +34,8 @@ Named pipes allow two or more processes to communicate with each other. These ar
 
 Devices are charachterized using "major device number" and "minor device number". The "major device number" represents the device driver that's used \(like 8 which is used for sd block devices\) while the "minor device number" informs the kernel which unique device it is in the driver class \( like 0 which represents 1st device\).
 
+The most common device names in Linux:
+1. SCSI Devices : Most mass storage devices use the "SCSI" protocol. "SCSI" protocol stands for **S**mall **C**omputer **S**ystem **I**nterface. It's a protocol used for communication between system and other peripherals like dics, printer, etc. Linux system corresponds SCSI disks with hardrive disks in /dev. These disks are prefixed with "sd", which stands for  SCSI disk. Common SCSI disk files are "/dev/sda" \(First hard disk\), "/dev/sdb" \(Second hard disk\), "/dev/sda3" \(Third partition on First hard disk \).
+2. Pseudo Devices : These devices aren't physically connected to the system. Common pseudo devices are usually "charachter" devices like "/dev/zero" \(accepts and discards all input, produces a continuous stream of NULL bytes\), "/dev/null" \(accepts and discards all input, produces no output\), "/dev/random" \(produces random numbers\).
+3. PATA Devices : In older devices, hardrive devices are prefixed with "hd" like "/dev/hda" \(First hard disk\), "/dev/hdd2" \(Second partition on 4th hard disk\).
 
