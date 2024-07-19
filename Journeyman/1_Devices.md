@@ -39,3 +39,12 @@ The most common device names in Linux:
 2. Pseudo Devices : These devices aren't physically connected to the system. Common pseudo devices are usually "charachter" devices like "/dev/zero" \(accepts and discards all input, produces a continuous stream of NULL bytes\), "/dev/null" \(accepts and discards all input, produces no output\), "/dev/random" \(produces random numbers\).
 3. PATA Devices : In older devices, hardrive devices are prefixed with "hd" like "/dev/hda" \(First hard disk\), "/dev/hdd2" \(Second partition on 4th hard disk\).
 
+"**sysfs**" was created to better manage devices on the system which "/dev" fails to do. "sysfs" is a virtual filesystem that's mounted to the "/sys" directory. It gives more information about devices in the "/dev" directory. While "/dev" and "/sys" seem to be similar, they actually have major differences. "/dev" is a simple file system which allows other programs to access devices while "/sys" filesystem is used to view information and manage the devices. The "/sys" filesystem basically contains all the information for all devices on your system, such as the manufacturer and model, where the device is plugged in, the state of the device, etc. These files aren't device nodes, so we don't interact with devices from the "/sys" directory, rather managing devices. To look at "/sys" directory:
+> $ls /sys/block/sda
+
+In the past, "mknod" was used to create device files in "/dev". We would have to specify device type \(like "b"\) and then major and minor number. To remove device we would have to "rm" device file from "/dev".
+> $mknod /dev/sdb1 b 8 3
+
+But nowadays, we use the "**udev**" command. "udev" system dynamically creates and removes device files depending on whether or not they are connected. There is a "udevd" daemon which is constantly listening any messages from kernel about any devices connected to system. "Udevd" will parse that information and it will match the data with the rules that are specified in "/etc/udev/rules.d", depending on those rules it will most likely create device nodes and symbolic links for the devices. One can write the own "udevd" rules, but "udevd" rules mostly cover everything and there's no need to do so. To view the "udev" and "sysfs" database, use the "udvadm" command.
+> $udevadm info --query=all --name=/dev/sda
+
