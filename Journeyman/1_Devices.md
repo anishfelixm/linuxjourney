@@ -48,3 +48,10 @@ In the past, "mknod" was used to create device files in "/dev". We would have to
 But nowadays, we use the "**udev**" command. "udev" system dynamically creates and removes device files depending on whether or not they are connected. There is a "udevd" daemon which is constantly listening any messages from kernel about any devices connected to system. "Udevd" will parse that information and it will match the data with the rules that are specified in "/etc/udev/rules.d", depending on those rules it will most likely create device nodes and symbolic links for the devices. One can write the own "udevd" rules, but "udevd" rules mostly cover everything and there's no need to do so. To view the "udev" and "sysfs" database, use the "udvadm" command.
 > $udevadm info --query=all --name=/dev/sda
 
+To list information about devices:
+> $lsusb  -\> usb devices
+>
+> $lspci  -\> pci devices
+>
+> $lsscsi  -\> scsi devices
+
