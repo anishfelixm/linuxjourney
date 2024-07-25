@@ -55,3 +55,16 @@ To list information about devices:
 >
 > $lsscsi  -\> scsi devices
 
+The "**dd**" tool is super useful for converting and copying data. It reads input from a file or data stream and writes it to a file or data stream. Example:
+> $dd if=/home/backup.img of=/dev/sdb bs=1M count = 2
+
+This command is copying the contents of backup.img to /dev/sdb. It will copy the data in 2 blocks, each of 1 Mega byte ie total of 2Mb is copied. There's mostly no need to use "bs" and "count" unless we want to optimize copying.
++ if=file - Input file, read from a file
++ of=file - Output file, write to a file
++ bs=bytes - Block size, it reads and writes this many bytes of data at a time.
++ count=number - Number of blocks to copy.
+
+"dd" is extremely powerful, you can use it to make backups of anything.
+
+---
+---
